@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +32,39 @@
                     max-width: 800px; 
                     line-height: 1.5; 
                 }
+
+         .gallery {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin: 20px;
+                }
+
+        img {
+                    max-width: 500px;
+                    height: auto;
+                    margin: 30px;
+                    border: 1px solid #ccc;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+        img:hover {
+                   transform: scale(1.1);
     </style>
 </head>
 <body>
     <h1>Look what we have here!🖌️🎨</h1>
-    <br><br>
+    <br>
     <p>Welcome to my creative workspace! In this realm of artistic exploration, creative multifunctional drawing set in wooden box Nassau 112 pieces offers everything that I need.</p>
     
     <p>The entire suitcase is perfectly organized, has enough storage space and is easy to easily find the products in it. This large set consists of pencils, acrylic paints, watercolors, oil pastels and everything I need during creation.</p>
     
     <p>Whether you're an aspiring artist or an art enthusiast, may this glimpse into my artistic toolkit inspire your own creative journey!</p>
+
+    <div class="gallery">
+        <img src={% static 'img/tools.jpg'%} alt="">
+    </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +33,29 @@
                     max-width: 800px; 
                     line-height: 1.5; 
                 }
-     </style>
+
+        
+        .gallery {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin: 20px;
+        }
+
+        img {
+                    max-width: 600px;
+                    height: auto;
+                    margin: 30px;
+                    border: 1px solid #ccc;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+                    transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <h1>🌅Here are some of my works!🌃</h1>
@@ -40,5 +63,12 @@
     <p>This page is a visual journey through a tapestry of colors, emotions, and stories.</p>
     <p>Each painting is a unique expression, capturing moments of inspiration, imagination, and the essence of my creative spirit.</p>
     <p>Thank you for joining me on this artistic odyssey!I hope you find inspiration and a connection with the art.</p>
+    
+    <div class="gallery">
+        <img src={% static 'img/stairs.jpg'%} alt="">
+        <img src={% static 'img/sun&moon.jpg'%} alt="">
+        <img src={% static 'img/heart.jpg'%} alt="">
+        <img src={% static 'img/moto.jpg'%} alt="">
+    </div>
 </body>
 </html>
